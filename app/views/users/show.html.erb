@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+
+<h3><strong>My Programs:</strong></h3>
+<ul>
+  <% @user.programs.each do |program| %>
+    <li><%= program.name %></li>
+  <% end %>
+</ul>
+
+
+<%= link_to 'Edit', edit_program_path(@program) %> |
+<%= link_to 'Back', programs_path %>

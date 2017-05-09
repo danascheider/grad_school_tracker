@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root to: 'users#show'
+  
   resources :faculties, path: 'faculty'
   resources :programs
   resources :universities

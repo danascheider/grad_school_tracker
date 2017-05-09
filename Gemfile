@@ -41,6 +41,7 @@ group :development, :test do
   gem 'cucumber-rails', '~> 1.4', require: false
   gem 'factory_girl_rails', '~> 4.8'
   gem 'capybara', '~> 2.14'
+  gem 'database_cleaner'
 end
 
 group :development do
