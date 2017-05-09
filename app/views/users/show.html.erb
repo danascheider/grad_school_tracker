@@ -1,12 +1,16 @@
 <p id="notice"><%= notice %></p>
 
 <h3><strong>My Programs:</strong></h3>
-<ul>
-  <% @user.programs.each do |program| %>
-    <li><%= program.name %></li>
-  <% end %>
-</ul>
+<% if @user.programs.empty? %>
+  <p>You don't have any programs yet! <%= link_to 'Add a new program', new_program_path %></p>
+<% else %>
+  <ul>
+    <% @user.programs.each do |program| %>
+      <li><%= react_component("ProgramListItem", { name: program.name }) %></li>
+    <% end %>
+  </ul>
+<% end %>
 
 
-<%= link_to 'Edit', edit_program_path(@program) %> |
-<%= link_to 'Back', programs_path %>
+<%= link_to 'Change Password', edit_user_password_path(@user) %> |
+<%= link_to 'Log Out', destroy_user_session_path %>
