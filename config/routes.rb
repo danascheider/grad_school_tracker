@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :faculties
+  resources :faculties, path: 'faculty'
   resources :programs
   resources :universities
   devise_for :users
