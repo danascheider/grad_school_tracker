@@ -3,7 +3,7 @@
       <a href="#" class="name">
         <%= image_tag "avatars/1.jpg", class: "avatar" %>
         <span>
-          John Smith
+          <%= current_user.name %>
           <i class="fa fa-chevron-down"></i>
         </span>
       </a>
@@ -12,13 +12,13 @@
           <a href="<%= user_programs_path(current_user) %>">My Programs</a>
         </li>
         <li>
-          <a href="#">Billing</a>
+          <a href="<%= user_path(current_user) %>">My Profile</a>
         </li>
         <li>
           <a href="#">Notifications</a>
         </li>
         <li>
-          <a href="#">Help / Support</a>
+          <a href="<%= edit_user_registration_path(current_user) %>">Edit Details</a>
         </li>
         <li>
           <a href="<%= destroy_user_session_path(current_user) %>">Sign out</a>

@@ -5,4 +5,14 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :programs
+
+  def name
+    has_name? ? "#{first_name} #{last_name}" : "New User"
+  end
+
+  private
+
+  def has_name?
+    first_name || last_name && !(first_name.try!(:empty?) && last_name.try!(:empty?))
+  end
 end
