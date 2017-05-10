@@ -3,7 +3,7 @@
 <div id="user_programs">
   <h3><strong>My Programs:</strong></h3>
   <% if @user.programs.empty? %>
-    <p>You don't have any programs yet! <%= link_to 'Add a new program', new_program_path %></p>
+    <p>You don't have any programs yet! <%= link_to 'Add a new program', new_user_program_path(current_user) %></p>
   <% else %>
     <ul>
       <% @user.programs.each do |program| %>

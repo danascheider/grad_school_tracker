@@ -26,9 +26,9 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 
-# Use React for UI
-gem 'react-rails', '~> 2.1'
-gem 'webpacker', '~> 1.2'
+# Use Bootstrap
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'jquery-rails', '~> 4.3'
 
 # Use Devise for authentication
 gem 'devise', git: 'https://github.com/gogovan/devise.git', branch: 'rails-5.1'

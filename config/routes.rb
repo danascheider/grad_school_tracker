@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   root to: 'users#show'
 
   resources :faculties, path: 'faculty'
-  resources :programs
   resources :universities
 
   devise_for :users, controllers: {
@@ -12,4 +11,8 @@ Rails.application.routes.draw do
     unlocks: 'users/unlocks',
     confirmations: 'users/confirmations'
   }
+
+  resources :users  do
+    resources :programs, shallow: true
+  end
 end
